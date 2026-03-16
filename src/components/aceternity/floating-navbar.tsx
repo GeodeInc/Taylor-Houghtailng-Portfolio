@@ -61,6 +61,7 @@ export const FloatingNav = ({
             className={cn(
               "relative flex items-center space-x-1 text-sm font-medium text-neutral-400 transition-colors hover:text-white"
             )}
+            style={{ fontFamily: "var(--font-sub)" }}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block">{navItem.name}</span>
@@ -69,6 +70,7 @@ export const FloatingNav = ({
         <a
           href="#contact"
           className="relative rounded-full border border-white/[0.2] bg-white/10 px-4 py-1.5 text-sm font-medium text-white transition-all hover:bg-white/20"
+          style={{ fontFamily: "var(--font-sub)" }}
         >
           <span>Contact</span>
           <span className="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-[#a8b58c] to-transparent" />

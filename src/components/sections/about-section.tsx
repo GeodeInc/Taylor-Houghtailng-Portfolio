@@ -33,7 +33,7 @@ export const AboutSection = () => {
             style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
             About Me
           </span>
-          <h2 className="mt-4 bg-gradient-to-b from-white to-white/40 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             Who I Am
           </h2>
         </motion.div>
@@ -41,10 +41,10 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center space-y-5">
-            <p className="text-lg leading-relaxed text-neutral-300">
+            <p className="text-lg leading-relaxed text-neutral-200">
               I&apos;m Taylor — co-founder of TenzorLLC, a software freelance company building custom web apps and tools for businesses.
             </p>
-            <p className="text-lg leading-relaxed text-neutral-400">
+            <p className="text-lg leading-relaxed text-neutral-300">
               Full-time Computer Engineering student at Rutgers by day, lead UI/UX developer at Tenzor the rest of the time. I&apos;ve been studying computer science for the last 4 years and have grown 
               a passion for the software industry.
                
@@ -57,7 +57,7 @@ export const AboutSection = () => {
                 </span>
               ))}
             </div>
-            <motion.a href="/resume.pdf" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}
+            <motion.a href="/resume.pdf" whileHover={{ scale: 1.05, filter: "brightness(1.1)" }} whileTap={{ scale: 0.97 }}
               className="mt-1 inline-flex w-fit items-center gap-2 rounded-full border px-6 py-2.5 text-sm font-medium transition-all"
               style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
               <IconBriefcase size={16} />
@@ -72,8 +72,8 @@ export const AboutSection = () => {
                 className="rounded-2xl border p-5 backdrop-blur-sm"
                 style={{ borderColor: card.accentBorder, backgroundColor: card.accentBg }}>
                 <div className="mb-3" style={{ color: card.accentText }}>{card.icon}</div>
-                <h3 className="mb-1.5 font-semibold text-white">{card.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-500">{card.description}</p>
+                <h3 className="mb-1.5 font-semibold text-white" style={{ fontFamily: "var(--font-sub)" }}>{card.title}</h3>
+                <p className="text-sm leading-relaxed text-neutral-400">{card.description}</p>
               </TiltCard>
             ))}
           </motion.div>

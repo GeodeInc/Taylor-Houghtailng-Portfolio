@@ -59,10 +59,10 @@ export const ContactSection = () => {
             style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
             Contact
           </span>
-          <h2 className="mt-4 bg-gradient-to-b from-white to-white/40 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             Let&apos;s Work Together
           </h2>
-          <p className="mt-4 text-neutral-500">Have a project in mind or just want to say hi? My inbox is always open.</p>
+          <p className="mt-4 text-neutral-400">Have a project in mind or just want to say hi? My inbox is always open.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
@@ -94,8 +94,8 @@ export const ContactSection = () => {
                   placeholder="Hey Taylor, I'd love to collaborate on..." />
               </div>
               <Magnetic>
-                <motion.button type="submit" disabled={loading} whileTap={{ scale: loading ? 1 : 0.98 }}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                <motion.button type="submit" disabled={loading} whileHover={{ scale: loading ? 1 : 1.03, filter: loading ? "none" : "brightness(1.1)" }} whileTap={{ scale: loading ? 1 : 0.97 }}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{
                     backgroundColor: sent ? "#2a7a4a" : "var(--navy-dark)",
                     color: "#ffffff",
@@ -130,8 +130,8 @@ export const ContactSection = () => {
           <motion.div initial={{ opacity: 0, x: 30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col justify-between space-y-8">
             <div>
-              <h3 className="mb-2 text-lg font-semibold text-white">Get in touch</h3>
-              <p className="text-neutral-500">
+              <h3 className="mb-2 text-lg font-semibold text-white" style={{ fontFamily: "var(--font-sub)" }}>Get in touch</h3>
+              <p className="text-neutral-400">
                 I&apos;m currently open to new opportunities. Whether you have a question or
                 just want to say hi — I&apos;ll get back to you!
               </p>
@@ -142,12 +142,12 @@ export const ContactSection = () => {
             </div>
 
             <div>
-              <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-neutral-700">Find me on</h3>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-neutral-700" style={{ fontFamily: "var(--font-sub)" }}>Find me on</h3>
               <div className="grid grid-cols-2 gap-3">
                 {socials.map((s) => (
                   <Magnetic key={s.label} strength={0.3}>
                     <a href={s.href} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-xl border px-4 py-3 text-sm text-neutral-500 transition-all"
+                      className="flex items-center gap-3 rounded-xl border px-4 py-3 text-sm text-neutral-500 transition-all hover:scale-[1.04] active:scale-[0.97]"
                       style={{ borderColor: "rgba(255,255,255,0.05)", backgroundColor: "rgba(255,255,255,0.02)" }}
                       onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--navy-border)"; e.currentTarget.style.color = "var(--navy)"; }}
                       onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)"; e.currentTarget.style.color = ""; }}>

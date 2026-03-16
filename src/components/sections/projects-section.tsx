@@ -6,7 +6,7 @@ import { IconBrandGithub, IconBuildingStore, IconBrain, IconCube } from "@tabler
 import { Magnetic } from "@/components/ui/magnetic";
 
 const TenzorSmallIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 308 479" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="30" height="30" viewBox="0 0 308 479" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M217.193 10.0027C229.649 46.7203 255.79 65.6079 288.587 81.3969" stroke="white" strokeWidth="35" strokeLinecap="round"/>
     <path d="M24.8409 82.0027H289.841" stroke="white" strokeWidth="35" strokeLinecap="round"/>
     <path d="M5.48363e-06 478.094V114.457H84.0909V142.298H31.8182V450.253H84.0909V478.094H5.48363e-06ZM307.99 114.457V478.094H223.899V450.253H276.172V142.298H223.899V114.457H307.99Z" fill="white" strokeWidth="10" paintOrder="stroke fill"/>
@@ -209,21 +209,12 @@ const ReflectionHeader = () => {
 
 const projects = [
   {
-    title: "TenzorPOS — POS & CRM Platform",
-    description: "Frontend UI/UX Developer. Building a modern point-of-sale and customer relationship management suite from the ground up — elegant interfaces, real-time data, and intuitive workflows for businesses of every size.",
-    icon: <IconBuildingStore size={20} />,
-    tags: ["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Node.js","2025-Present"],
-    className: "col-span-1",
-    header: <POSHeader />,
-    link: "https://tenzorllc.com",
-  },
-  {
     title: "Tenzorllc.com",
     description: "Founder and Frontend UI/UX Developer. Building software better than ever.",
     icon: <TenzorSmallIcon />,
     tags: ["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Node.js","2025-Present"],
     className: "col-span-1",
-    featured: true,
+    badge: "Business",
     header: (
       <div className="flex h-32 w-full items-center justify-center overflow-hidden rounded-xl relative"
         style={{ background: "linear-gradient(160deg, #1c2a3a 0%, #0d1520 100%)" }}>
@@ -243,6 +234,16 @@ const projects = [
         </div>
       </div>
     ),
+    link: "https://tenzorllc.com",
+  },
+  {
+    title: "TenzorPOS — POS & CRM Platform",
+    description: "Frontend UI/UX Developer. Building a modern point-of-sale and customer relationship management suite from the ground up — elegant interfaces, real-time data, and intuitive workflows for businesses of every size.",
+    icon: <IconBuildingStore size={20} />,
+    tags: ["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Node.js","2025-Present"],
+    className: "col-span-1",
+    badge: "Product",
+    header: <POSHeader />,
     link: "https://tenzorllc.com",
   },
   {
@@ -281,18 +282,18 @@ export const ProjectsSection = () => {
             style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
             Projects
           </span>
-          <h2 className="mt-4 bg-gradient-to-b from-white to-white/40 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             Things I&apos;ve Built
           </h2>
-          <p className="mt-4 text-neutral-500">A selection of projects that showcase my range and depth.</p>
+          <p className="mt-4 text-neutral-400">A selection of projects that showcase my range and depth.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
           <BentoGrid className="grid-cols-1 md:grid-cols-2">
             {projects.map((p) => (
               <BentoGridItem key={p.title} title={
-                p.featured
-                  ? <span className="flex items-center gap-2">{p.title} <span className="rounded-full px-2 py-0.5 text-xs font-normal" style={{ backgroundColor: "var(--navy-fill-md)", color: "var(--navy)" }}>Founder</span></span>
+                p.badge
+                  ? <span className="flex items-center gap-2">{p.title} <span className="rounded-full px-2 py-0.5 text-xs font-normal" style={{ backgroundColor: "var(--navy-fill-md)", color: "var(--navy)" }}>{p.badge}</span></span>
                   : p.title
               } description={p.description} icon={p.icon} tags={p.tags} header={p.header} className="col-span-1" link={p.link} />
             ))}
@@ -302,7 +303,7 @@ export const ProjectsSection = () => {
         <motion.div initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.5 }} className="mt-12 text-center">
           <Magnetic>
             <a href="https://github.com/GeodeInc" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-6 py-3 text-sm font-medium text-neutral-400 transition-all hover:text-white hover:bg-white/[0.07]">
+              className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-6 py-3 text-sm font-medium text-neutral-400 transition-all hover:text-white hover:bg-white/[0.07] hover:scale-[1.05] hover:border-white/[0.15] active:scale-[0.97]">
               <IconBrandGithub size={16} />
               View All on GitHub
             </a>

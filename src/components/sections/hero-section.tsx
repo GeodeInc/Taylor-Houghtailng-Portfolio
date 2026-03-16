@@ -116,7 +116,7 @@ export const HeroSection = () => {
         </motion.div>
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-gradient-to-b from-white to-white/30 bg-clip-text text-5xl font-bold text-transparent md:text-7xl lg:text-8xl">
+          className="whitespace-nowrap text-4xl font-bold md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-name)", color: "#ffffff" }}>
           Taylor Houghtaling
         </motion.h1>
 
@@ -125,23 +125,24 @@ export const HeroSection = () => {
         </motion.div>
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-400">
-          CE student at Rutgers, co-founder of TenzorLLC, and the person who stays up
-          too late making sure the UI looks exactly right.
+          className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300">
+          CE student at Rutgers, co-founder of TenzorLLC — I build full stack web apps
+          with a focus on clean UI and real user experience.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Magnetic>
-            <a href="#projects" className="group inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold transition-all"
-              style={{ backgroundColor: "var(--navy-dark)", color: "#ffffff", boxShadow: "0 8px 28px var(--navy-shadow)" }}>
+            <a href="#projects" className="group inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold transition-all hover:scale-[1.05] hover:brightness-110 active:scale-[0.97]"
+              style={{ backgroundColor: "var(--navy-dark)", color: "#ffffff", boxShadow: "0 8px 28px var(--navy-shadow)", fontFamily: "var(--font-sub)" }}>
               <span>View My Work</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
           </Magnetic>
           <Magnetic>
             <a href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.04] px-8 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/[0.08]">
+              className="inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.04] px-8 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/[0.08] hover:scale-[1.05] hover:border-white/[0.2] active:scale-[0.97]"
+              style={{ fontFamily: "var(--font-sub)" }}>
               Get In Touch
             </a>
           </Magnetic>
@@ -158,7 +159,7 @@ export const HeroSection = () => {
               <a href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.04] text-neutral-500 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.04] text-neutral-500 transition-all hover:scale-110 active:scale-95"
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = s.hb; e.currentTarget.style.backgroundColor = s.hbg; e.currentTarget.style.color = s.hc; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = ""; e.currentTarget.style.backgroundColor = ""; e.currentTarget.style.color = ""; }}>
                 {s.icon}
@@ -194,7 +195,7 @@ const TypewriterWords = ({ words }: { words: string[] }) => {
     return () => clearTimeout(t);
   }, [text, del, idx, words]);
   return (
-    <div className="flex items-center gap-2 text-2xl font-semibold md:text-3xl" style={{ color: "var(--navy)" }}>
+    <div className="flex items-center gap-2 text-2xl font-semibold md:text-3xl" style={{ color: "var(--navy)", fontFamily: "var(--font-sub)" }}>
       <span>{text}</span>
       <span className="animate-pulse" style={{ color: "var(--navy-dark)" }}>|</span>
     </div>

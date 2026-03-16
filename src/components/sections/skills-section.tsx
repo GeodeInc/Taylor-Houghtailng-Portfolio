@@ -49,10 +49,10 @@ export const SkillsSection = () => {
             style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
             Skills & Tech
           </span>
-          <h2 className="mt-4 bg-gradient-to-b from-white to-white/40 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             What I Work With
           </h2>
-          <p className="mt-4 text-neutral-500">A curated toolkit built over years of building real products.</p>
+          <p className="mt-4 text-neutral-400">A curated toolkit built over years of building real products.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.2 }} className="space-y-4">
@@ -68,11 +68,11 @@ export const SkillsSection = () => {
               style={{ borderColor: "rgba(255,255,255,0.05)", backgroundColor: "rgba(255,255,255,0.02)" }}>
               <div className="mb-4 flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full" style={{ backgroundColor: cat.dot }} />
-                <h3 className="text-sm font-semibold text-white">{cat.title}</h3>
+                <h3 className="text-sm font-semibold text-white" style={{ fontFamily: "var(--font-sub)" }}>{cat.title}</h3>
               </div>
               <ul className="space-y-4">
                 {cat.skills.map((skill) => (
-                  <li key={skill} className="flex items-center gap-2 text-sm text-neutral-500">
+                  <li key={skill} className="flex items-center gap-2 text-sm text-neutral-400">
                     <span className="text-xs" style={{ color: cat.dot }}>✦</span>
                     {skill}
                   </li>

@@ -33,8 +33,8 @@ export const BentoGridItem = ({
           {icon}
         </div>
       )}
-      <div className="mb-2 font-bold text-white">{title}</div>
-      <div className="text-sm font-normal text-neutral-400">{description}</div>
+      <div className="mb-2 font-bold text-white" style={{ fontFamily: "var(--font-sub)" }}>{title}</div>
+      <div className="text-sm font-normal text-neutral-300">{description}</div>
       {tags && (
         <div className="mt-3 flex flex-wrap gap-1.5">
           {tags.map((tag) => (
