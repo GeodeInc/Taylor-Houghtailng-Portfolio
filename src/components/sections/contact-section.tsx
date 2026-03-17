@@ -1,14 +1,15 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { BackgroundBeams } from "@/components/aceternity/background-beams";
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconSend, IconCheck } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconMail, IconPhone, IconSend, IconCheck } from "@tabler/icons-react";
 import { Magnetic } from "@/components/ui/magnetic";
 
 const socials = [
   { label: "GitHub",      icon: <IconBrandGithub size={20} />,   href: "https://github.com/GeodeInc" },
   { label: "LinkedIn",    icon: <IconBrandLinkedin size={20} />, href: "https://www.linkedin.com/in/taylor-houghtaling-19b333382/" },
   { label: "Email",       icon: <IconMail size={20} />,          href: "mailto:taylor@tenzorllc.com" },
+  { label: "Phone",       icon: <IconPhone size={20} />,         href: "tel:+16092252579" },
 ];
 
 export const ContactSection = () => {
@@ -18,11 +19,6 @@ export const ContactSection = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [emailCount, setEmailCount] = useState<{ count: number; limit: number } | null>(null);
-
-  useEffect(() => {
-    fetch("/api/contact").then((r) => r.json()).then(setEmailCount).catch(() => {});
-  }, []);
 
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,9 +31,8 @@ export const ContactSection = () => {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
-      const data = await res.json();
+      await res.json();
       setSent(true);
-      setEmailCount({ count: data.count, limit: data.limit });
       setForm({ name: "", email: "", message: "" });
       setTimeout(() => setSent(false), 4000);
     } catch {
@@ -104,25 +99,6 @@ export const ContactSection = () => {
                 </motion.button>
               </Magnetic>
               {error && <p className="mt-2 text-center text-xs text-red-400">{error}</p>}
-              {emailCount && (
-                <div className="mt-3 space-y-1.5">
-                  <div className="flex items-center justify-between text-xs text-neutral-600">
-                    <span>Emails received today</span>
-                    <span style={{ color: emailCount.count >= emailCount.limit ? "#f87171" : "var(--navy)" }}>
-                      {emailCount.count} / {emailCount.limit}
-                    </span>
-                  </div>
-                  <div className="h-1 w-full overflow-hidden rounded-full bg-white/[0.05]">
-                    <motion.div
-                      className="h-full rounded-full"
-                      style={{ backgroundColor: emailCount.count >= emailCount.limit ? "#f87171" : "var(--navy)" }}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${(emailCount.count / emailCount.limit) * 100}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-              )}
             </form>
           </motion.div>
 

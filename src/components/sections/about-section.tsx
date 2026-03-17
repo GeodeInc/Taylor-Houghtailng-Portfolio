@@ -11,10 +11,10 @@ const stats = [
 ];
 
 const cards = [
-  { icon: <IconBriefcase size={22} />, title: "TenzorLLC Co-Founder", description: "Started a software freelance company with a partner — we build web apps and tools for small businesses and startups.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy)"      },
-  { icon: <IconCode size={22} />,      title: "Rutgers Engineer",     description: "Pursuing a Computer Engineering degree at Rutgers University. Bridging the gap between hardware thinking and software building.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy-dark)" },
-  { icon: <IconBulb size={22} />,      title: "UI/UX Lead",           description: "The one on the team who won't ship until the spacing is right. I own the front-end experience at Tenzor end to end.", accentBorder: "var(--sage-border-sm)", accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
-  { icon: <IconBrandGithub size={22} />, title: "GeodeInc",             description: "My creative identity — the GitHub handle and label I've built under since before Tenzor. Where my independent work lives.", accentBorder: "var(--sage-border)",    accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
+  { icon: <IconBriefcase size={22} />, title: "TenzorLLC Co-Founder", description: "Co-founded a software development company delivering web applications and operational tools for businesses.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy)"      },
+  { icon: <IconCode size={22} />,      title: "Computer Engineering Student, Rutgers University",     description: "Focused on building at the intersection of hardware systems and scalable software.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy-dark)" },
+  { icon: <IconBulb size={22} />,      title: "UI/UX Lead",           description: "Lead front-end and user experience development at Tenzor, ensuring high-quality, detail-oriented interfaces.", accentBorder: "var(--sage-border-sm)", accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
+  { icon: <IconBrandGithub size={22} />, title: "GeodeInc",             description: "Personal brand and GitHub identity, representing my independent projects and work outside of Tenzor.", accentBorder: "var(--sage-border)",    accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
 ];
 
 export const AboutSection = () => {
@@ -42,11 +42,9 @@ export const AboutSection = () => {
           <motion.div initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col justify-center space-y-5">
             <p className="text-lg leading-relaxed text-neutral-200">
-              I&apos;m Taylor — co-founder of TenzorLLC, a software freelance company building custom web apps and tools for businesses.
-            </p>
+              I’m Taylor — co-founder of Tenzor LLC, where we build custom web apps, POS systems, and tools for real businesses.            </p>
             <p className="text-lg leading-relaxed text-neutral-300">
-              Full-time Computer Engineering student at Rutgers by day, lead UI/UX developer at Tenzor the rest of the time. I&apos;ve been studying computer science for the last 4 years and have grown a passion for the software industry.
-            </p>
+              I study Computer Engineering at Rutgers and lead front-end and UI/UX at Tenzor, focusing on creating clean, high-quality user experiences.            </p>
             <div className="flex flex-wrap gap-2 pt-1">
               {["React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL"].map((s) => (
                 <span key={s} className="rounded-full border px-3 py-1 text-sm text-neutral-400"
@@ -55,7 +53,7 @@ export const AboutSection = () => {
                 </span>
               ))}
             </div>
-            <motion.a href="/resume.pdf" whileHover={{ scale: 1.05, filter: "brightness(1.1)" }} whileTap={{ scale: 0.97 }}
+            <motion.a href="/resume.pdf" download="Taylor_Houghtaling_Resume.pdf" whileHover={{ scale: 1.05, filter: "brightness(1.1)" }} whileTap={{ scale: 0.97 }}
               className="mt-1 inline-flex w-fit items-center gap-2 rounded-full border px-6 py-2.5 text-sm font-medium transition-all"
               style={{ borderColor: "var(--navy-border)", backgroundColor: "var(--navy-fill-sm)", color: "var(--navy)" }}>
               <IconBriefcase size={16} />
