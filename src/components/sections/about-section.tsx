@@ -1,7 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { IconCode, IconRocket, IconBulb, IconUsers, IconBriefcase } from "@tabler/icons-react";
+import { IconCode, IconRocket, IconBulb, IconBrandGithub, IconBriefcase, IconUsers } from "@tabler/icons-react";
 import { TiltCard } from "@/components/ui/tilt-card";
 
 const stats = [
@@ -14,7 +14,7 @@ const cards = [
   { icon: <IconBriefcase size={22} />, title: "TenzorLLC Co-Founder", description: "Started a software freelance company with a partner — we build web apps and tools for small businesses and startups.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy)"      },
   { icon: <IconCode size={22} />,      title: "Rutgers Engineer",     description: "Pursuing a Computer Engineering degree at Rutgers University. Bridging the gap between hardware thinking and software building.", accentBorder: "var(--navy-border-sm)", accentBg: "var(--navy-fill-xs)", accentText: "var(--navy-dark)" },
   { icon: <IconBulb size={22} />,      title: "UI/UX Lead",           description: "The one on the team who won't ship until the spacing is right. I own the front-end experience at Tenzor end to end.", accentBorder: "var(--sage-border-sm)", accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
-  { icon: <IconUsers size={22} />,     title: "Always Learning",      description: "15+ technologies across the stack and still adding. If something new solves a real problem, I want to know how it works.", accentBorder: "var(--sage-border)",    accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
+  { icon: <IconBrandGithub size={22} />, title: "GeodeInc",             description: "My creative identity — the GitHub handle and label I've built under since before Tenzor. Where my independent work lives.", accentBorder: "var(--sage-border)",    accentBg: "var(--sage-fill-sm)", accentText: "var(--sage)"      },
 ];
 
 export const AboutSection = () => {
@@ -45,9 +45,7 @@ export const AboutSection = () => {
               I&apos;m Taylor — co-founder of TenzorLLC, a software freelance company building custom web apps and tools for businesses.
             </p>
             <p className="text-lg leading-relaxed text-neutral-300">
-              Full-time Computer Engineering student at Rutgers by day, lead UI/UX developer at Tenzor the rest of the time. I&apos;ve been studying computer science for the last 4 years and have grown 
-              a passion for the software industry.
-               
+              Full-time Computer Engineering student at Rutgers by day, lead UI/UX developer at Tenzor the rest of the time. I&apos;ve been studying computer science for the last 4 years and have grown a passion for the software industry.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
               {["React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL"].map((s) => (

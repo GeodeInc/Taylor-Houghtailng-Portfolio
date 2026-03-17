@@ -1,4 +1,5 @@
 import { FloatingNav } from "@/components/aceternity/floating-navbar";
+import { GeodeBrand } from "@/components/ui/geode-brand";
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { SkillsSection } from "@/components/sections/skills-section";
@@ -21,6 +22,7 @@ const navItems = [
 export default function Home() {
   return (
     <main className="bg-black">
+      <GeodeBrand />
       <FloatingNav navItems={navItems} />
       <HeroSection />
       <AboutSection />

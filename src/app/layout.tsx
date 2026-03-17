@@ -26,8 +26,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Taylor Houghtaling's Portfolio",
-  description: "Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
+  title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+  description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
+  keywords: [
+    "Taylor Houghtaling",
+    "Taylor Houghtaling developer",
+    "Taylor Houghtaling portfolio",
+    "Full Stack Developer",
+    "Creative Technologist",
+    "web developer",
+    "software engineer",
+  ],
+  authors: [{ name: "Taylor Houghtaling" }],
+  creator: "Taylor Houghtaling",
+  openGraph: {
+    type: "website",
+    title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+    description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
+    siteName: "Taylor Houghtaling",
+  },
+  twitter: {
+    card: "summary",
+    title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+    description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
+    creator: "@taylorhoughtaling",
+  },
 };
 
 export default function RootLayout({
