@@ -5,7 +5,7 @@
   <text x="0" y="52"
     font-family="'Fredoka One', sans-serif"
     font-size="52" fill="white">Geode</text>
-  <text x="180" y="52"
+  <text x="163" y="52"
     font-family="'Fredoka One', sans-serif"
-    font-size="52" fill="rgba(255,255,255,0.3)">Inc</text>
+    font-size="52" fill="#a8b58c">Inc</text>
 </svg>
