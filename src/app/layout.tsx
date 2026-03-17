@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+  title: "Taylor Houghtaling Portfolio",
   description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
   keywords: [
     "Taylor Houghtaling",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   creator: "Taylor Houghtaling",
   openGraph: {
     type: "website",
-    title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+    title: "Taylor Houghtaling Portfolio",
     description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
     siteName: "Taylor Houghtaling",
   },
   twitter: {
     card: "summary",
-    title: "Taylor Houghtaling | Full Stack Developer & Creative Technologist",
+    title: "Taylor Houghtaling Portfolio",
     description: "Portfolio of Taylor Houghtaling — Full Stack Developer & Creative Technologist building extraordinary digital experiences.",
     creator: "@taylorhoughtaling",
   },
