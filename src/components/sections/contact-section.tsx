@@ -62,7 +62,6 @@ export const ContactSection = () => {
           <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             Let&apos;s Work Together
           </h2>
-          <p className="mt-4 text-neutral-400">Have a project in mind or just want to say hi? My inbox is always open.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">

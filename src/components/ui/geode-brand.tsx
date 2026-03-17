@@ -43,14 +43,14 @@ export const GeodeBrand = () => {
           opacity: showWordmark ? 1 : 0,
           marginLeft: showWordmark ? 10 : 0,
         }}
-        transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+        transition={{ duration: showWordmark ? 0.4 : 0.9, ease: [0.4, 0, 0.2, 1] }}
       >
         <motion.img
           src="/geodeinc_wordmark_only.svg"
           alt="GeodeInc"
           className="h-7 w-auto object-contain block"
           animate={{ x: showWordmark ? 0 : -8 }}
-          transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: showWordmark ? 0.4 : 0.9, ease: [0.4, 0, 0.2, 1] }}
         />
       </motion.div>
     </motion.a>

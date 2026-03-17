@@ -210,7 +210,7 @@ const ReflectionHeader = () => {
 const projects = [
   {
     title: "Tenzorllc.com",
-    description: "Founder and Frontend UI/UX Developer. Building software better than ever.",
+    description: "Building the software company I always wanted to work for.",
     icon: <TenzorSmallIcon />,
     tags: ["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Node.js","2025-Present"],
     className: "col-span-1",
@@ -238,7 +238,7 @@ const projects = [
   },
   {
     title: "TenzorPOS — POS & CRM Platform",
-    description: "Frontend UI/UX Developer. Building a modern point-of-sale and customer relationship management suite from the ground up — elegant interfaces, real-time data, and intuitive workflows for businesses of every size.",
+    description: "A full point-of-sale and CRM suite built from scratch for businesses of every size.",
     icon: <IconBuildingStore size={20} />,
     tags: ["React","Next.js","TypeScript","Tailwind CSS","Framer Motion","Node.js","2025-Present"],
     className: "col-span-1",
@@ -285,7 +285,6 @@ export const ProjectsSection = () => {
           <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl" style={{ fontFamily: "var(--font-sub)" }}>
             Things I&apos;ve Built
           </h2>
-          <p className="mt-4 text-neutral-400">A selection of projects that showcase my range and depth.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
