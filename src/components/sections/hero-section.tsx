@@ -116,7 +116,7 @@ export const HeroSection = () => {
         </motion.div>
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-          className="whitespace-nowrap text-4xl font-bold md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-name)", color: "#ffffff" }}>
+          className="text-4xl font-bold md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-name)", color: "#ffffff" }}>
           Taylor Houghtaling
         </motion.h1>
 
@@ -195,7 +195,7 @@ const TypewriterWords = ({ words }: { words: string[] }) => {
     return () => clearTimeout(t);
   }, [text, del, idx, words]);
   return (
-    <div className="flex items-center gap-2 text-2xl font-semibold md:text-3xl" style={{ color: "var(--navy)", fontFamily: "var(--font-sub)" }}>
+    <div className="flex items-center gap-2 text-xl font-semibold md:text-3xl" style={{ color: "var(--navy)", fontFamily: "var(--font-sub)" }}>
       <span>{text}</span>
       <span className="animate-pulse" style={{ color: "var(--navy-dark)" }}>|</span>
     </div>
