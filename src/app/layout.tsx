@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${poppins.variable} ${chango.variable} ${jua.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${poppins.variable} ${chango.variable} ${jua.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden`}
       >
         {children}
       </body>
